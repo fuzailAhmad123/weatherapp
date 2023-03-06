@@ -19,7 +19,7 @@
     color: var(--colorLight2);
     background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 h1 {
@@ -244,16 +244,7 @@ h1 {
     margin-bottom: 1px;
 }
 
-@media(max-width:600px){
-    .parameter-container {
-       flex-direction: column;
-       align-items: center;
-    }
-    .parameter{
-        min-width: 160px;
-    }
 
-}
 
 .not-found{
     display: none;
@@ -271,4 +262,37 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
+}
+
+@media(max-width:600px){
+    .parameter-container {
+       flex-direction: column;
+       align-items: center;
+    }
+    .parameter{
+        min-width: 160px;
+    }
+
+}
+
+
+@media(max-width:500px){
+    .not-found{
+        position: fixed;
+        bottom: 20%;
+    }
+
+    .not-found img{
+        height: 200px;
+        width: 200px;
+        
+    }
+}
+
+@media(max-height:800px){
+    .not-found{
+        position: absolute;
+       bottom: 20%;
+        left: 50%;
+    }
 }
